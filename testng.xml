@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="LEAP Test-Automation-HDFC-CRM SAKSHI"  parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="com.absli.Listner.CustomListner"/>
+    </listeners>
+
+
+
+        <test name="Suite Test1">
+            <classes>
+                <class name="com.absli.testcases.EndtoEndProposerSame">
+                    <methods>
+                        <include name="CompletesameGMSF"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+            <test name="Suite Test2">
+            <classes>
+                <class name="com.absli.testcases.EndtoEndProposerDiff_Major">
+                    <methods>
+                        <include name="CompletemajordiffGMSA"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test name="Suite Test3">
+            <classes>
+                <class name="com.absli.testcases.EndtoEndProposerDiff_Minor">
+                    <methods>
+                        <include name="CompleteminorGMSA"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+<!--        <test name="Suite Test4">-->
+<!--            <classes>-->
+<!--                <class name="com.absli.testcases.EndtoEndProposerSame">-->
+<!--                    <methods>-->
+<!--                        <include name="CompletesameAASC"/>-->
+<!--                    </methods>-->
+<!--                </class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--    <test name="Suite Test5">-->
+<!--        <classes>-->
+<!--            <class name="com.absli.testcases.EndtoEndProposerDiff_Major">-->
+<!--                <methods>-->
+<!--                    <include name="CompletemajordiffASPE"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Suite Test6">-->
+<!--        <classes>-->
+<!--            <class name="com.absli.testcases.EndtoEndProposerDiff_Minor">-->
+<!--                <methods>-->
+<!--                    <include name="CompleteminorAIPB"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Suite Test7">-->
+<!--        <classes>-->
+<!--            <class name="com.absli.testcases.EndtoEndProposerSame">-->
+<!--                <methods>-->
+<!--                    <include name="CompletesameAAPB"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Suite Test8">-->
+<!--        <classes>-->
+<!--            <class name="com.absli.testcases.EndtoEndProposerDiff_Major">-->
+<!--                <methods>-->
+<!--                    <include name="CompletemajordiffAAPA"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Suite Test9">-->
+<!--        <classes>-->
+<!--            <class name="com.absli.testcases.EndtoEndProposerDiff_Minor">-->
+<!--                <methods>-->
+<!--                    <include name="CompleteminorAAPB"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+</suite>
