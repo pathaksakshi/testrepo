@@ -331,7 +331,7 @@ public class EndToEndProSameJourney {
         // Address Details page //
         address.SelectcommaddtypeWeb(testData.get("CommAddressType"));
         //address.entercommadd3(CommAddress3);
-        address.entercommlandmark(testData.get("CommLandmark"));
+        //address.entercommlandmark(testData.get("CommLandmark"));
         TestUtil.scrollTillEndOfPage(getDriver());
         address.clickConfirmcapital();  // CONFIRM button QA //
         dashboard.checkLoaderWeb();
