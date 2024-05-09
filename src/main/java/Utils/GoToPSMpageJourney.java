@@ -158,6 +158,9 @@ public class GoToPSMpageJourney {
 		}
 		customerprofile.companyagreecheckbox();
 		TestUtil.scrollTillEndOfPage(getDriver());
+		insuprofdetails.SelectQualificationwebpsm(testData.get("qualification"));
+		insuprofdetails.Selectmaritalstatuswebpsm(testData.get("Insumarital"));
+		insuprofdetails.SelectOccupationwebpsm(testData.get("occupationOption"));
 		customerprofile.cpnextbutton(); // customer profile Next Button(QA)
 		dashboard.checkLoaderWeb();
 

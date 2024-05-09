@@ -220,14 +220,12 @@ public class EndToEndProMajorJourney {
 
 
         // Proposer-Insured Personal info tab // (Minor Scenario)
-        proposerpersonalinfo.SelectMaritalStatusweb(testData.get("Propmarital"));
-        if (testData.get("Propmarital").equalsIgnoreCase("Married")) {
-            if (testData.get("PropTitle").equalsIgnoreCase("Ms.")) {
-                proposerpersonalinfo.EnterMaidenNameweb(testData.get("propMaidenName"));
-            } else if (testData.get("PropTitle").equalsIgnoreCase("Mrs.")) {
-                proposerpersonalinfo.EnterMaidenNameweb(testData.get("propMaidenName"));
-            }
-        }
+        // Proposer-Insured Personal info tab // (Same Scenario)
+//        try {
+//            insurerpersonalinfo.EnterMaidenNameweb(prop.getProperties("maidenname"));
+//        }catch (Exception e){
+//            System.out.println("Maiden name field is not present");
+//        }
         proposerpersonalinfo.EnterFatherSpaouseNameweb(testData.get("PropfatherSpouse"));
         proposerpersonalinfo.EnterMotherNameweb(testData.get("Propmothername"));
         proposerpersonalinfo.SelectBirthPlaceweb(testData.get("ProposerBirthPlace"));
@@ -241,89 +239,20 @@ public class EndToEndProMajorJourney {
         }
 
         // Proposer Professional Details tab // (major different scenario)
-        proposerprofdetails.SelectQualificationweb(testData.get("Propqualification"));
-        proposerprofdetails.SelectOccupationweb(testData.get("PropoccupationOption"));
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Professional")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Business Owner")) {
-            proposerprofdetails.EnterOccupationNameofbusinessweb(testData.get("Propnameofbusiness"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Service")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Farmer/Agriculturist")) {
+        // Insurer Professional Details tab //
+        TestUtil.scrollTillEndOfPage(getDriver());
 
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Driver")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Armed Forces")) {
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Army/Navy/Police")) {
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Skilled Worker")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Jeweller")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Builder")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Scrap Dealer")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Doctor")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Lawyer")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Architect")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Others")) {
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
+        //--------------------  psm changes for major (proposer)  -------------------------------------------
+        // insuprofdetails.EnterOccupationNameofEmployeeweb(testData.get("NameOfEmployer"));
+        insuprofdetails.EnterOccupationNatureofbusinessweb(testData.get("natureofbusiness"));
+        insuprofdetails.selectOccupationTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
+        // insuprofdetails.EnterOccupationDesignationweb(testData.get("Designation"));
+        insuprofdetails.EnterOccupationNameofbusinessweb(testData.get("nameofbusiness"));
+//            insuprofdetails.SpouseAnnualIncome(prop.getProperties("AnnualIncome"));
+//            insuprofdetails.Enterspouseannualincome(prop.getProperties("AnnualIncome"));
+        insuprofdetails.ClickonSaveContinueButtonweb();
+        dashboard.checkLoaderWeb();
+
         if (testData.get("IsAreYouRegisterPerson").equalsIgnoreCase("Yes")) {
             proposerprofdetails.ClickOnAreYouRegisterPersonaUnderGSTweb(testData.get("GSTnumber"));
         }
@@ -332,14 +261,12 @@ public class EndToEndProMajorJourney {
 
         dashboard.checkLoaderWeb();
         // Insured Personal info tab // (major different scenario)
-        insurerpersonalinfo.SelectMaritalStatusweb(testData.get("Insumarital"));
-        if (testData.get("Insumarital").equalsIgnoreCase("Married")) {
-            if (testData.get("InsuredTitle").equalsIgnoreCase("Ms.")) {
-                insurerpersonalinfo.EnterMaidenNameweb(prop.getProperties("maidenname"));
-            } else if (testData.get("InsuredTitle").equalsIgnoreCase("Mrs.")) {
-                insurerpersonalinfo.EnterMaidenNameweb(prop.getProperties("maidenname"));
-            }
-        }
+//        insurerpersonalinfo.SelectMaritalStatusweb(testData.get("Insumarital"));
+//        try {
+//            insurerpersonalinfo.EnterMaidenNameweb(prop.getProperties("maidenname"));
+//        }catch (Exception e){
+//            System.out.println("Maiden name field is not present");
+//        }
         insurerpersonalinfo.EnterFatherSpaouseNameweb(testData.get("fatherSpouse"));
         insurerpersonalinfo.EnterMotherNameweb(testData.get("mothername"));
         insurerpersonalinfo.SelectBirthPlaceweb(testData.get("InsurerBirthPlace"));
@@ -347,105 +274,25 @@ public class EndToEndProMajorJourney {
             insurerpersonalinfo.IsMinorpolitical(testData.get("PoliticalDetails"));
         }
         // Insurer Professional Details tab // (major different scenario)
-        insuprofdetails.SelectQualificationweb(testData.get("qualification"));
-        insuprofdetails.SelectOccupationweb(testData.get("occupationOption"));
-        if (testData.get("occupationOption").equalsIgnoreCase("Professional")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Business Owner")) {
-            insuprofdetails.InsurerNameofbusinessweb(testData.get("nameofbusiness"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Service")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Farmer/Agriculturist")) {
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Driver")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Armed Forces")) {
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Army/Navy/Police")) {
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Skilled Worker")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Jeweller")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Builder")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Scrap Dealer")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Doctor")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Lawyer")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Architect")) {
-            insuprofdetails.InsurerNameofEmployeeweb(testData.get("NameOfEmployer"));
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
-        if (testData.get("occupationOption").equalsIgnoreCase("Others")) {
-            insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
-            insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
-            insuprofdetails.InsurerDesignationweb(testData.get("Designation"));
-            insuprofdetails.InsurerAnnualincomeweb(testData.get("AnnualIncome"));
-        }
+        // Insurer Professional Details tab //
+        TestUtil.scrollTillEndOfPage(getDriver());
+
+        //--------------------  psm changes for major (insured)  -------------------------------------------
+
+        // insuprofdetails.EnterOccupationNameofEmployeeweb(testData.get("NameOfEmployer"));
+        insuprofdetails.InsurerNatureofbusinessweb(testData.get("natureofbusiness"));
+        insuprofdetails.InsurerTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
+         //insuprofdetails.EnterOccupationDesignationweb(testData.get("Designation"));
+        insuprofdetails.InsurerNameofbusinessweb(testData.get("nameofbusiness"));
+        //insuprofdetails.SpouseAnnualIncome(prop.getProperties("AnnualIncome"));
+         //  insuprofdetails.Enterspouseannualincome(prop.getProperties("AnnualIncome"));
+
+
+
         if (testData.get("IsinsurerRegisterPerson").equalsIgnoreCase("Yes")) {
             insuprofdetails.InsurerRegisterPersonaUnderGSTweb(testData.get("insurerGSTnumber"));
         }
+
         insuprofdetails.ClickonSaveContinueButtonweb();
         dashboard.checkLoaderWeb();
 
@@ -914,92 +761,92 @@ public class EndToEndProMajorJourney {
 
 //
 //        //  Proposer E customer consent declaration //
-//        if (testData.get("IsECCD").equalsIgnoreCase("Yes")) {
-//            eccd.ECCDCompleteNow();
-//            eccd.ClickOnyestoallCheckboxWeb();
-//            eccd.ClickOnrecurringdepositCheckboxWeb();
-//            eccd.ClickOnABSLICheckboxWeb();
-//            eccd.ClickOnillustrationCheckboxWeb();
-//            eccd.SelectRelationshipweb(testData.get("SelectRelationECCD"));
-//            eccd.Selectmodeofpaymentweb(testData.get("ModeofPaymentECCD"));
-//            eccd.Acceptbutton();
-//            dashboard.checkLoaderWeb();
-//            eccd.enterProposerOTPeccdweb(prop.getProperties("ProposerOTP"));
-//            bankdetails.clicksubmitBtn();
-//            dashboard.checkLoaderWeb();
-//            eccd.ClickGoBackbutton();
-//
-//
-//            // Insurer CCD //
-//            eccd.ECCDCompleteNowInsured();
-//            eccd.ClickOnyestoallCheckboxInsuredWeb();
-//            eccd.ClickOnrecurringdepositCheckboxInsuredWeb();
-//            eccd.ClickOnABSLICheckboxInsuredWeb();
-//            eccd.ClickOnillustrationCheckboxInsuredWeb();
-//            eccd.SelectRelationshipInsuredweb(testData.get("ModeofPaymentECCD"));
-//            eccd.SelectmodeofpaymentInsuredweb(testData.get("ModeofPaymentECCD"));
-//            eccd.AcceptbuttonInsured();
-//            dashboard.checkLoaderWeb();
-//            eccd.enterInsurerOTPeccdweb(prop.getProperties("InsurerOTP"));
-//
-//            bankdetails.clicksubmitBtn();
-//            dashboard.checkLoaderWeb();
-//            eccd.ClickGoBackbutton();
-//            eccd.Nextbutton();
-//            eccd.ClickCopylinkbutton();
-//            eccd.ClickContinuebutton();
-//        } else {
-//            eccd.ClickDoitLaterbutton();
-//            dashboard.checkLoaderWeb();
-//
-//        }
-//
-//        // Payment Page //
-//        if (testData.get("IsSelectChequeORDDPayment").equalsIgnoreCase("Yes")) {
-//            if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Cheque")) {
-//                paymentpage.ClickOnChequeAndDDModeweb();
-//                paymentpage.UploadChequeAndDDImgweb();
-//                paymentpage.EnterChequeDDNoWeb(testData.get("ChequeDDNo"));
-//                paymentpage.EnterDDMMYYONCDDWeb(testData.get("CDDday"), testData.get("CDDMonth"), testData.get("CDDYear"));
-//                paymentpage.EnterIFSCCodeOnCDDWeb(testData.get("CDDIFSCcode"));
-//                paymentpage.ClickCDDPaymentSubmitBTNweb();
-//                customerprofile.cdnextbutton(); // customer details NEXT button(QA)
-//                dashboard.checkLoaderWeb();
-//
-//
-//            } else if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Demand Draft")) {
-//                paymentpage.UploadChequeAndDDImgweb();
-//                paymentpage.EnterChequeDDNoWeb(testData.get("ChequeDDNo"));
-//                paymentpage.EnterDDMMYYONCDDWeb(testData.get("CDDday"), testData.get("CDDMonth"), testData.get("CDDYear"));
-//                paymentpage.EnterIFSCCodeOnCDDWeb(testData.get("CDDIFSCcode"));
-//                dashboard.checkLoaderWeb();
-//                TestUtil.scrollToElement(driver, getDriver().findElement(By.xpath("(//span[text()='Submit'])[1]")));
-//                paymentpage.UploadDECLARATIONFORMImgweb();
-//                dashboard.checkLoaderWeb();
-//                paymentpage.ClickCDDPaymentSubmitBTNweb();
-//                customerprofile.cdnextbutton(); // customer details NEXT button(QA)
-//                dashboard.checkLoaderWeb();
-//
-//            } else if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Fund Transfer")) {
-//                TestUtil.scrollTillEndOfPage(getDriver());
-//                paymentpage.ClickOnFundTransferModeweb();
-//                paymentpage.UploadFundtransferImgweb();
-//                TestUtil.scrollTillEndOfPage(getDriver());
-//                paymentpage.EnterpolicyNumberFTWeb(testData.get("PolicyNumber"));
-//                WebElement Balamount = getDriver().findElement(By.xpath("(//div[contains(@class,'win-back-balance')])[2]"));
-//                String BalamountValue = Balamount.getText();
-//                paymentpage.EnterAmountFTWeb(BalamountValue);
-//                paymentpage.ClickOnFTsavebuttonweb();
-//                paymentpage.ClickOnFTredeembuttonweb();
-//                customerprofile.cdnextbutton(); // customer details NEXT button(QA)
-//                dashboard.checkLoaderWeb();
-//
-//            }
-//        } else {
-//            TestUtil.scrollTillEndOfPage(getDriver());
-//            paymentpage.ClickpaymentDoitLaterbutton();
-//            dashboard.checkLoaderWeb();
-//
-//        }
+        if (testData.get("IsECCD").equalsIgnoreCase("Yes")) {
+            eccd.ECCDCompleteNow();
+            eccd.ClickOnyestoallCheckboxWeb();
+            eccd.ClickOnrecurringdepositCheckboxWeb();
+            eccd.ClickOnABSLICheckboxWeb();
+            eccd.ClickOnillustrationCheckboxWeb();
+            eccd.SelectRelationshipweb(testData.get("SelectRelationECCD"));
+            eccd.Selectmodeofpaymentweb(testData.get("ModeofPaymentECCD"));
+            eccd.Acceptbutton();
+            dashboard.checkLoaderWeb();
+            eccd.enterProposerOTPeccdweb(prop.getProperties("ProposerOTP"));
+            bankdetails.clicksubmitBtn();
+            dashboard.checkLoaderWeb();
+            eccd.ClickGoBackbutton();
+
+
+            // Insurer CCD //
+            eccd.ECCDCompleteNowInsured();
+            eccd.ClickOnyestoallCheckboxInsuredWeb();
+            eccd.ClickOnrecurringdepositCheckboxInsuredWeb();
+            eccd.ClickOnABSLICheckboxInsuredWeb();
+            eccd.ClickOnillustrationCheckboxInsuredWeb();
+            eccd.SelectRelationshipInsuredweb(testData.get("ModeofPaymentECCD"));
+            eccd.SelectmodeofpaymentInsuredweb(testData.get("ModeofPaymentECCD"));
+            eccd.AcceptbuttonInsured();
+            dashboard.checkLoaderWeb();
+            eccd.enterInsurerOTPeccdweb(prop.getProperties("InsurerOTP"));
+
+            bankdetails.clicksubmitBtn();
+            dashboard.checkLoaderWeb();
+            eccd.ClickGoBackbutton();
+            eccd.Nextbutton();
+            eccd.ClickCopylinkbutton();
+            eccd.ClickContinuebutton();
+        } else {
+            eccd.ClickDoitLaterbutton();
+            dashboard.checkLoaderWeb();
+
+        }
+
+        // Payment Page //
+        if (testData.get("IsSelectChequeORDDPayment").equalsIgnoreCase("Yes")) {
+            if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Cheque")) {
+                paymentpage.ClickOnChequeAndDDModeweb();
+                paymentpage.UploadChequeAndDDImgweb();
+                paymentpage.EnterChequeDDNoWeb(testData.get("ChequeDDNo"));
+                paymentpage.EnterDDMMYYONCDDWeb(testData.get("CDDday"), testData.get("CDDMonth"), testData.get("CDDYear"));
+                paymentpage.EnterIFSCCodeOnCDDWeb(testData.get("CDDIFSCcode"));
+                paymentpage.ClickCDDPaymentSubmitBTNweb();
+                customerprofile.cdnextbutton(); // customer details NEXT button(QA)
+                dashboard.checkLoaderWeb();
+
+
+            } else if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Demand Draft")) {
+                paymentpage.UploadChequeAndDDImgweb();
+                paymentpage.EnterChequeDDNoWeb(testData.get("ChequeDDNo"));
+                paymentpage.EnterDDMMYYONCDDWeb(testData.get("CDDday"), testData.get("CDDMonth"), testData.get("CDDYear"));
+                paymentpage.EnterIFSCCodeOnCDDWeb(testData.get("CDDIFSCcode"));
+                dashboard.checkLoaderWeb();
+                TestUtil.scrollToElement(driver, getDriver().findElement(By.xpath("(//span[text()='Submit'])[1]")));
+                paymentpage.UploadDECLARATIONFORMImgweb();
+                dashboard.checkLoaderWeb();
+                paymentpage.ClickCDDPaymentSubmitBTNweb();
+                customerprofile.cdnextbutton(); // customer details NEXT button(QA)
+                dashboard.checkLoaderWeb();
+
+            } else if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Fund Transfer")) {
+                TestUtil.scrollTillEndOfPage(getDriver());
+                paymentpage.ClickOnFundTransferModeweb();
+                paymentpage.UploadFundtransferImgweb();
+                TestUtil.scrollTillEndOfPage(getDriver());
+                paymentpage.EnterpolicyNumberFTWeb(testData.get("PolicyNumber"));
+                WebElement Balamount = getDriver().findElement(By.xpath("(//div[contains(@class,'win-back-balance')])[2]"));
+                String BalamountValue = Balamount.getText();
+                paymentpage.EnterAmountFTWeb(BalamountValue);
+                paymentpage.ClickOnFTsavebuttonweb();
+                paymentpage.ClickOnFTredeembuttonweb();
+                customerprofile.cdnextbutton(); // customer details NEXT button(QA)
+                dashboard.checkLoaderWeb();
+
+            }
+        } else {
+            TestUtil.scrollTillEndOfPage(getDriver());
+            paymentpage.ClickpaymentDoitLaterbutton();
+            dashboard.checkLoaderWeb();
+
+        }
     }
 }

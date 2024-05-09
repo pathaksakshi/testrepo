@@ -155,8 +155,14 @@ public class GoToPMSpage_MajorJourney {
 			}
 			customerprofile.companyagreecheckbox();
 			TestUtil.scrollTillEndOfPage(getDriver());
+			//--------------------  psm changes major scenario -------------------------------------------
+			insuprofdetails.SelectQualificationwebpsm(testData.get("qualification"));
+			insuprofdetails.Selectmaritalstatuswebpsm(testData.get("Insumarital"));
+			insuprofdetails.SelectOccupationwebpsm(testData.get("occupationOption"));
 			customerprofile.cpnextbutton(); // customer profile Next Button(QA)
 			dashboard.checkLoaderWeb();
+//			customerprofile.cpnextbutton(); // customer profile Next Button(QA)
+//			dashboard.checkLoaderWeb();
 
 			// Customer Details Page //
 			customerprofile.SelectPropTitleweb(testData.get("PropTitle"));
@@ -173,6 +179,13 @@ public class GoToPMSpage_MajorJourney {
 				customerprofile.selectTypeOfNRI(testData.get("insurNriType"));
 				customerprofile.enterCountryOfNRIResidence(testData.get("insurNriCountryResidence"));
 			}
+
+			//--------------------  psm changes major scenario -------------------------------------------
+			insuprofdetails.SelectQualificationwebpsm(testData.get("qualification"));
+			insuprofdetails.Selectmaritalstatuswebpsm(testData.get("Insumarital"));
+			insuprofdetails.SelectOccupationwebpsm(testData.get("occupationOption"));
+			insuprofdetails.Enterannualincomeinsuredwebpsm(testData.get("AnnualIncome"));
+
 			customerprofile.cpnextbutton(); // customer profile Next Button(QA)
 			dashboard.checkLoaderWeb();
 			Thread.sleep(2000);

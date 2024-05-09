@@ -98,6 +98,7 @@ public class GoToPMSpage_MinorJourney {
 	        bankdetails = new BankDetails(getDriver());
 	        nominee = new Nominee(getDriver());
 	        address = new AddressDetalis(getDriver());
+			minorpersonalinfo=new MinorPersonalInfo(getDriver());
 	        proposerpersonalinfo = new ProposerPersonalInfo(getDriver());
 	        proposerprofdetails = new ProposerProfessionalDetails(getDriver());
 	        insurerpersonalinfo = new InsurerPersonalInfo(getDriver());
@@ -157,6 +158,12 @@ public class GoToPMSpage_MinorJourney {
 			}
 
 			//customerprofile.propagreecheckbox();
+			//--------------------  psm changes minor scenario -------------------------------------------
+			insuprofdetails.SelectQualificationwebpsm(testData.get("Propqualification"));
+			insuprofdetails.Selectmaritalstatuswebpsm(testData.get("Propmarital"));
+			insuprofdetails.SelectOccupationwebpsm(testData.get("PropoccupationOption"));
+			dashboard.checkLoaderWeb();
+
 			customerprofile.companyagreecheckbox();
 			TestUtil.scrollTillEndOfPage(getDriver());
 			customerprofile.cpnextbutton(); // customer profile Next Button(QA)
@@ -181,6 +188,11 @@ public class GoToPMSpage_MinorJourney {
 			customerprofile.cpnextbutton(); // customer profile Next Button(QA)
 			dashboard.checkLoaderWeb();
 			Thread.sleep(5000);
+			//--------------------  psm changes minor scenario -------------------------------------------
+			minorpersonalinfo.selectEducationStage(testData.get("Stage"), testData.get("Studying"), testData.get("CollegeStudy"));
+			customerprofile.cpnextbutton(); // customer profile Next Button(QA)
+			dashboard.checkLoaderWeb();
+			Thread.sleep(2000);
 			customerprofile.EnterDOBInsuredweb(testData.get("InsurerDOB"));
 			customerprofile.clickOnGenderBtnWeb(testData.get("InsuredGender"));
 			customerprofile.SalutationTitleInsuredWeb(testData.get("InsuredTitle"));

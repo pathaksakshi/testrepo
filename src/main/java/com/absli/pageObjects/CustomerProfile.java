@@ -36,9 +36,9 @@ public class CustomerProfile extends TestBase {
     private WebElement prpttl;
     @FindBy(xpath = "//div[contains(@aria-haspopup,'listbox')]")
     private WebElement relinsured;
-    @FindBy(xpath = "(//input[contains(@id,'firstname')])[1]")
+    @FindBy(xpath = "(//input[contains(@id,'firstName')])[1]")
     private WebElement insufirstname;
-    @FindBy(xpath = "(//input[contains(@id,'lastname')])[1]")
+    @FindBy(xpath = "(//input[contains(@id,'lastName')])[1]")
     private WebElement insulastname;
     @FindBy(xpath = "(//div[@id='salutation'])[1]")
     private WebElement insutitle;

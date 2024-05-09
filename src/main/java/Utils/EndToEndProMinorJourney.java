@@ -230,14 +230,14 @@ public class EndToEndProMinorJourney {
 
 
         // Proposer-Insured Personal info tab // (Minor Scenario)
-        proposerpersonalinfo.SelectMaritalStatusweb(testData.get("Propmarital"));
-        if (testData.get("Propmarital").equalsIgnoreCase("Married")) {
-            if (testData.get("PropTitle").equalsIgnoreCase("Ms.")) {
-                proposerpersonalinfo.EnterMaidenNameweb(testData.get("propMaidenName"));
-            } else if (testData.get("PropTitle").equalsIgnoreCase("Mrs.")) {
-                proposerpersonalinfo.EnterMaidenNameweb(testData.get("propMaidenName"));
-            }
-        }
+//        proposerpersonalinfo.SelectMaritalStatusweb(testData.get("Propmarital"));
+//        if (testData.get("Propmarital").equalsIgnoreCase("Married")) {
+//            if (testData.get("PropTitle").equalsIgnoreCase("Ms.")) {
+//                proposerpersonalinfo.EnterMaidenNameweb(testData.get("propMaidenName"));
+//            } else if (testData.get("PropTitle").equalsIgnoreCase("Mrs.")) {
+//                proposerpersonalinfo.EnterMaidenNameweb(testData.get("propMaidenName"));
+//            }
+//        }
         proposerpersonalinfo.EnterFatherSpaouseNameweb(testData.get("PropfatherSpouse"));
         proposerpersonalinfo.EnterMotherNameweb(testData.get("Propmothername"));
         proposerpersonalinfo.SelectBirthPlaceweb(testData.get("ProposerBirthPlace"));
@@ -250,90 +250,19 @@ public class EndToEndProMinorJourney {
             proposerpersonalinfo.IsaProppolitical(testData.get("PoliticalDetails"));
         }
 
-        // Proposer Professional Details tab //
-        proposerprofdetails.SelectQualificationweb(testData.get("Propqualification"));
-        proposerprofdetails.SelectOccupationweb(testData.get("PropoccupationOption"));
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Professional")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Business Owner")) {
-            proposerprofdetails.EnterOccupationNameofbusinessweb(testData.get("Propnameofbusiness"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Service")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Farmer/Agriculturist")) {
+        //--------------------  psm changes for minor (proposer)  -------------------------------------------
 
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Driver")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Armed Forces")) {
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Army/Navy/Police")) {
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Skilled Worker")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Jeweller")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Builder")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Scrap Dealer")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Doctor")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Lawyer")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Architect")) {
-            proposerprofdetails.EnterOccupationNameofEmployeeweb(testData.get("Propnameofemployee"));
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
-        if (testData.get("PropoccupationOption").equalsIgnoreCase("Others")) {
-            proposerprofdetails.EnterOccupationNatureofbusinessweb(testData.get("Propnatureofbusiness"));
-            proposerprofdetails.selectOccupationTypeofOrganisationweb(testData.get("Proptypeoforganisation"));
-            proposerprofdetails.EnterOccupationDesignationweb(testData.get("PropDesignation"));
-        }
+        // Proposer Professional Details tab //
+        // insuprofdetails.EnterOccupationNameofEmployeeweb(testData.get("NameOfEmployer"));
+        insuprofdetails.EnterOccupationNatureofbusinessweb(testData.get("natureofbusiness"));
+        insuprofdetails.selectOccupationTypeofOrganisationweb(testData.get("TypeOfOrganisation"));
+        // insuprofdetails.EnterOccupationDesignationweb(testData.get("Designation"));
+        insuprofdetails.EnterOccupationNameofbusinessweb(testData.get("nameofbusiness"));
+//            insuprofdetails.SpouseAnnualIncome(prop.getProperties("AnnualIncome"));
+//            insuprofdetails.Enterspouseannualincome(prop.getProperties("AnnualIncome"));
+        insuprofdetails.ClickonSaveContinueButtonweb();
+        dashboard.checkLoaderWeb();
+
         if (testData.get("IsAreYouRegisterPerson").equalsIgnoreCase("Yes")) {
             proposerprofdetails.ClickOnAreYouRegisterPersonaUnderGSTweb(testData.get("GSTnumber"));
         }

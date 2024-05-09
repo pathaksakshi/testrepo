@@ -21,7 +21,7 @@ public class InsuProfessionalDetails extends TestBase {
     // Insurer Professional Details tab // 8/6/2023=mayur
     @FindBy(xpath = "(//div[contains(@id,'mui-component-select-23')])[2]") // for same ='prop' diff='insu'
     private WebElement qualificationele;
-    @FindBy(xpath = "(//div[contains(@id,'mui-component-select-24')])[2]")// for same ='prop'  diff='insu'
+        @FindBy(xpath = "(//div[contains(@id,'mui-component-select-24')])[2]")// for same ='prop'  diff='insu'
     private WebElement occupationele;
     @FindBy(xpath = "//input[@name='28']")// for same ='prop'
     private WebElement natureofbusinessele;
@@ -101,6 +101,64 @@ public class InsuProfessionalDetails extends TestBase {
         }
     }
 
+    //-----------------PSM changes-----------------------------//
+    @FindBy(xpath = "//div[@id='mui-component-select-qualification']")
+    private WebElement qualificationele1;
+    public void SelectQualificationwebpsm(String qualification) throws InterruptedException {
+        wait.waitForElementToBeVisibleweb(getDriver(), qualificationele1, 20,"time out to find element on page");
+        if(qualificationele1.isDisplayed()) {
+            qualificationele1.click();
+        }
+        Thread.sleep(1000);
+        WebElement selecttext = getDriver().findElement(By.xpath("//ul//li//span[text()='"+qualification+"']"));
+        wait.waitForElementToBeVisibleweb(getDriver(), selecttext, 20,"time out to find element on page");
+        selecttext.click();
+        Allure.step( "Select the qualification  >"   + qualification);
+
+    }
+    @FindBy(xpath = "//div[@id='mui-component-select-lifeStage']")
+    private WebElement maritalstatus;
+    public void Selectmaritalstatuswebpsm(String Insumarital) throws InterruptedException {
+        wait.waitForElementToBeVisibleweb(getDriver(), maritalstatus, 20,"time out to find element on page");
+        if(maritalstatus.isDisplayed()) {
+            maritalstatus.click();
+        }
+        Thread.sleep(1000);
+        WebElement selecttext = getDriver().findElement(By.xpath("//ul//li//span[text()='"+Insumarital+"']"));
+        wait.waitForElementToBeVisibleweb(getDriver(), selecttext, 20,"time out to find element on page");
+        selecttext.click();
+        Allure.step( "Select the occupation Option  >"   + Insumarital);
+    }
+
+    @FindBy(xpath = "(//div[contains(@id,'mui-component-select-occupation')])")
+    private WebElement occupationele1;
+    public void SelectOccupationwebpsm(String occupationOption) throws InterruptedException {
+        wait.waitForElementToBeVisibleweb(getDriver(), occupationele1, 20,"time out to find element on page");
+        if(occupationele1.isDisplayed()) {
+            occupationele1.click();
+        }
+        Thread.sleep(1000);
+        WebElement selecttext = getDriver().findElement(By.xpath("//ul//li//span[text()='"+occupationOption+"']"));
+        wait.waitForElementToBeVisibleweb(getDriver(), selecttext, 20,"time out to find element on page");
+        selecttext.click();
+        Allure.step( "Select the occupation Option  >"   + occupationOption);
+    }
+
+
+    @FindBy(xpath = "//input[@name='annualIncome']")
+    private WebElement annualincomeinsuredpsm;
+    public void Enterannualincomeinsuredwebpsm(String AnnualIncome) throws InterruptedException {
+        wait.waitForElementToBeVisibleweb(getDriver(), annualincomeinsuredpsm, 20,"time out to find element on page");
+        if (annualincomeinsuredpsm.isDisplayed()) {
+            annualincomeinsuredpsm.sendKeys(AnnualIncome);
+            Allure.step( "Enter insured's annual income  >"   + AnnualIncome);
+
+        } else {
+            System.out.println("Insured annual income is not present");
+        }
+
+    }
+    //-------------------------------------------------------------------------------------------------------------//
     public void SelectQualificationweb(String qualification) throws InterruptedException {
         wait.waitForElementToBeVisibleweb(getDriver(), qualificationele, 20,"time out to find element on page");
         if(qualificationele.isDisplayed()) {
